@@ -1,0 +1,15 @@
+---
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
+metadata:
+  name: "guestbook-ui-ext"
+  namespace: "default"
+spec:
+  defaultBackend:
+    service:
+      name: "guestbook-ui"
+      port:
+        number: 80
+status:
+  loadBalancer: {}
+
